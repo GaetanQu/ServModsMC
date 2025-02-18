@@ -1,19 +1,33 @@
-# (WIP) 📦 ServMods MC
+# 📦 ServMods MC
 
 A simple tool to automatically import your Minecraft server-side mods into the correct folder, hassle-free.
 
 ## 🚀 Features
 
 - 📂 **Automatic import** of Minecraft mods into the correct directory (Only from modrinth modpack for now, but it will be improved to work with others later).
-- 🛠️ **Compatible with Fabric servers** (others will be added later).
+- 🛠️ **Compatible with Fabric, Forge, NeoForge...**.
 
-## 🖥️ Installation
-Not available yet, I want to make sure it works well, which is'nt true right now.
+## 🖥️ Installation & run
+First install the script into your VPS with ;
+```bash
+Wait a second i'll add it in a minute
+```
+Then run this to make it executable
+```bash
+chmod +x ServMod.sh
+```
+Then run the script using :
+```bash
+./ServModMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY]
+```
 
 ### 📌 Requirements
 
-- A VPS and a CLI acces to it
-- It will automatically download required dependencies such as curl, jq and unzip.
+- A VPS running Ubuntu (maybe it'll work with other distros, test yourself) (or your computer but for now it only works on Ubuntu) and a CLI acces to it
+- Some dependencies such as curl, jq and unzip. You can download them by using :
+```bash
+sudo apt install curl jq unzip
+``` 
 
 ## 📜 License
 
