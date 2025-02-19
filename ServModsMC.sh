@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-source "./partials/modrinth.sh"
+source "$(dirname "$0")/partials/modrinth.sh"
 
 # Parse command line arguments
 while [[ "$#" -gt 0 ]]; do
