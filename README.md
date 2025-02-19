@@ -8,17 +8,17 @@ A simple tool to automatically import your Minecraft server-side mods into the c
 - 🛠️ **Compatible with Fabric, Forge, NeoForge...**.
 
 ## 🖥️ Installation & run
-First install the script into your VPS with ;
+First clone the repo into your VPS with ;
 ```bash
-Wait a second i'll add it in a minute
+git clone https://github.com/GaetanQu/ServModsMC
 ```
 Then run this to make it executable
 ```bash
-chmod +x ServMod.sh
+chmod +x ServModsMC/ServMods.sh
 ```
 Then run the script using :
 ```bash
-./ServModMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY]
+sudo ServMods/ServModMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY]
 ```
 
 ### 📌 Requirements
