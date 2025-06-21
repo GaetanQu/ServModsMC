@@ -14,11 +14,11 @@ git clone https://github.com/GaetanQu/ServModsMC
 ```
 Then run this to make it executable
 ```bash
-chmod +x ServModsMC/ServMods.sh
+chmod +x ServModsMC/ServModsMC.sh
 ```
 Then run the script using :
 ```bash
-sudo ServMods/ServModMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY]
+sudo ServModsMC/ServModsMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY]
 ```
 
 ### 📌 Requirements
