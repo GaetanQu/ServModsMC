@@ -18,7 +18,7 @@ chmod +x ServModsMC/ServModsMC.sh
 ```
 Then run the script using :
 ```bash
-sudo ServModsMC/ServModsMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY]
+sudo ServModsMC/ServModsMC.sh --link [YOUR_MODPACK_LINK] --dir [YOUR_SERVER_DIRECTORY] --user [OFTEN_MINECRAFT]
 ```
 
 ### 📌 Requirements
