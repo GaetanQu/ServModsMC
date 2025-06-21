@@ -58,13 +58,9 @@ if [[ -f "temp_folder/temp_modpack_folder/modrinth.index.json" ]]; then # Modrin
     echo "🟢 Found Modrinth modpack."
     # Call the partials/modrinth.sh file
     handle_modrinth
-elif [[ -f "temp_folder/temp_modpack_folder/manifest.json" ]]; then
-    echo "🟠 Found CurseForge modpack."
-    #curseforge, later
 else
-    echo "No platform found"
+    echo "Please install your modpack from Modrinth, this software only supports Modrinth modpacks for now. Aborted."
     rm -rf temp_folder
-    echo "❌ The modpack doesn't seem to be handled by this software, for more information you can push an issue ticket on GitHub. Aborted"
     exit 1
 fi
 
@@ -82,6 +78,6 @@ chown -R "$user":"$user" "$server_dir/mods"
 echo "✅ Permissions set for $user on $server_dir/mods !"
 
 # Clean the mess
-rm -r ./temp_folder
+# rm -r ./temp_folder
 
 ## That's it ! You can now run your server !

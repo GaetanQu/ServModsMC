@@ -4,7 +4,7 @@ A simple tool to automatically import your Minecraft server-side mods into the c
 
 ## 🚀 Features
 
-- 📂 **Automatic import** of Minecraft mods into the correct directory (Only from modrinth modpack for now, but it will be improved to work with others later).
+- 📂 **Automatic import** of Minecraft mods into the correct directory (Only from modrinth modpack for now, but it will be improved to work with others later (maybe not curseforge, shitty metadatas)).
 - 🛠️ **Compatible with Fabric, Forge, NeoForge...**.
 
 ## 🖥️ Installation & run
