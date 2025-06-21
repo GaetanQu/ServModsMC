@@ -7,6 +7,7 @@ handle_modrinth() {
 
         file_name=$(basename "$downloadUrl")
 
+        echo -ne "\033[2K\r"
         echo -ne "🔍 Checking if $file_name is a server-side mod...\r"
         
         # Check if the mod is server side with modrinth API.
@@ -18,22 +19,25 @@ handle_modrinth() {
         # - Then ask the API for its json of the mod
         response=$(curl -s "https://api.modrinth.com/v2/project/$project_id")
 
-        # - That's where I find the "server_side" key and its calue, either "required", "optionnal" or "unsupported"
+        # - That's where I find the "server_side" key and its value, either "required", "optionnal" or "unsupported"
         server_side=$(echo "$response" | jq -r '.server_side')
 
         # - If it is a server-side mod, then we download it using the download link
         if [[ $server_side == "required" || $server_side == "optional" ]]; then
-            echo -ne "📥 Downloading $file_name...\r"
+            echo -ne "\033[2K\r"
+            echo -n "📥 Downloading $file_name..."
             # Sometimes it works
             if curl -s -L "$downloadUrl" -o "temp_folder/mods/$file_name"; then
+                echo -ne "\033[2K\r"
                 echo "✅ $file_name is server-side ! It has been downloaded" 
             # Sometimes it doesn't
             else
-                echo "❌ $file_name couldn't be downloaded, check if your mod pack is up to date"
+                echo "❌ $file_name couldn't be downloaded, check if your modpack is up to date"
             fi
         # Ignore the client site mods
         else
-            echo "⏩ $file_name is a client-side mod. Ignored"
+            echo -ne "\033[2K\r"
+            echo "⏩ $file_name is a client side mod. Ignored"
         fi        
     done
 }
